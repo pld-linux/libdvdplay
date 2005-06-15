@@ -1,3 +1,4 @@
+%bcond_without	static_libs	% don't build static library
 Summary:	libdvdplay - simple library designed for DVD navigation
 Summary(pl):	libdvdplay - prosta biblioteka do nawigacji po DVD
 Name:		libdvdplay
@@ -8,8 +9,10 @@ Group:		Libraries
 Source0:	http://download.videolan.org/pub/videolan/libdvdplay/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	602bca4ef78d79aa87e5e8920d958a78
 URL:		http://developers.videolan.org/libdvdplay/
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libdvdread-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -50,8 +53,12 @@ Statyczna biblioteka libdvdplay.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.* .
-%configure
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
+%configure \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -77,6 +84,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libdvdplay.la
 %{_includedir}/dvdplay
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libdvdplay.a
+%endif
