@@ -2,7 +2,7 @@
 %bcond_without	static_libs	% don't build static library
 #
 Summary:	libdvdplay - simple library designed for DVD navigation
-Summary(pl):	libdvdplay - prosta biblioteka do nawigacji po DVD
+Summary(pl.UTF-8):   libdvdplay - prosta biblioteka do nawigacji po DVD
 Name:		libdvdplay
 Version:	1.0.1
 Release:	1
@@ -21,14 +21,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 libdvdplay is a portable abstraction library for DVD menus support, it
 provides a simple API to access a DVD device as a block device.
 
-%description -l pl
-libdvdplay to przeno¶na biblioteka abstrakcji do obs³ugi menu DVD.
-Udostêpnia proste API do dostêpu do urz±dzenia DVD jako urz±dzenia
+%description -l pl.UTF-8
+libdvdplay to przenoÅ›na biblioteka abstrakcji do obsÅ‚ugi menu DVD.
+UdostÄ™pnia proste API do dostÄ™pu do urzÄ…dzenia DVD jako urzÄ…dzenia
 blokowego.
 
 %package devel
 Summary:	Header files for libdvdplay library
-Summary(pl):	Pliki nag³ówkowe biblioteki libdvdplay
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libdvdplay
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libdvdread-devel
@@ -36,19 +36,19 @@ Requires:	libdvdread-devel
 %description devel
 Header files for libdvdplay library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki libdvdplay.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki libdvdplay.
 
 %package static
 Summary:	Static libdvdplay library
-Summary(pl):	Statyczna biblioteka libdvdplay
+Summary(pl.UTF-8):   Statyczna biblioteka libdvdplay
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libdvdplay library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libdvdplay.
 
 %prep
