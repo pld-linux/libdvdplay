@@ -2,7 +2,7 @@
 %bcond_without	static_libs	% don't build static library
 #
 Summary:	libdvdplay - simple library designed for DVD navigation
-Summary(pl.UTF-8):   libdvdplay - prosta biblioteka do nawigacji po DVD
+Summary(pl.UTF-8):	libdvdplay - prosta biblioteka do nawigacji po DVD
 Name:		libdvdplay
 Version:	1.0.1
 Release:	1
@@ -28,7 +28,7 @@ blokowego.
 
 %package devel
 Summary:	Header files for libdvdplay library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libdvdplay
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libdvdplay
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libdvdread-devel
@@ -41,7 +41,7 @@ Pliki nagłówkowe biblioteki libdvdplay.
 
 %package static
 Summary:	Static libdvdplay library
-Summary(pl.UTF-8):   Statyczna biblioteka libdvdplay
+Summary(pl.UTF-8):	Statyczna biblioteka libdvdplay
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
