@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	static_libs	% don't build static library
+%bcond_without	static_libs	# don't build static library
 #
 Summary:	libdvdplay - simple library designed for DVD navigation
 Summary(pl.UTF-8):	libdvdplay - prosta biblioteka do nawigacji po DVD
